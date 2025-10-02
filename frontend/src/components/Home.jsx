@@ -88,7 +88,7 @@ const Home = () => {
         onClick={() => setIsModalOpen(true)}
         className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-2xl rounded-full shadow-2xl hover:from-purple-600 hover:to-pink-600 flex items-center justify-center transition-all transform hover:scale-110"
       >
-        <span className="text-3xl font-bold"></span>
+        <span className="text-3xl font-bold">+</span>
       </button>
       {notes.length === 0 ? (
         <div className="text-center py-16">

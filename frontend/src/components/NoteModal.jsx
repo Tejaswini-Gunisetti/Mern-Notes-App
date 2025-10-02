@@ -77,7 +77,7 @@ const NoteModal = ({ isOpen, onClose, note, onSave }) => {
           <div className="flex space-x-3 pt-2">
             <button
               type="submit"
-              className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-3 rounded-xl hover:from-purple-600 hover:to-pink-600 font-semibold transition-all transform hover:scale-105 shadow-lg"
+              className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-3 rounded-xl hover:from-purple-600 hover:to-pink-600 font-semibold transition-all transform hover:scale-105 shadow-lg"
             >
               {note ? " Update" : " Create"}
             </button>

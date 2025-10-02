@@ -40,6 +40,12 @@ router.get("/:id", protect, async (req, res) => {
     if (!note) {
       return res.status(404).json({ message: "Note not found" });
     }
+    
+    if (note.createdBy.toString() !== req.user._id.toString()) {
+      return res.status(401).json({ message: "Not authorized" });
+    }
+    
+    res.json(note);
   } catch (err) {
     res.status(500).json({ message: "Server error" });
   }
@@ -61,8 +67,8 @@ router.put("/:id", protect, async (req, res) => {
     note.title = title || note.title;
     note.description = description || note.description;
 
-    const updatedCode = await note.save();
-    res.json(updatedCode);
+    const updatedNote = await note.save();
+    res.json(updatedNote);
   } catch (err) {
     res.status(500).json({ message: "Server error" });
   }
